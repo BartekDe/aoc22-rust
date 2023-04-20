@@ -21,11 +21,7 @@ pub fn calculate_for_top_x(x: usize) -> usize {
         current_sum += line_str.parse::<usize>().unwrap();
     }
 
-    let mut sum = 0;
-    for i in top_x_numbers {
-        sum += i;
-    }
-    sum
+    top_x_numbers.iter().sum()
 }
 
 fn read_lines(filename: String) -> io::Lines<io::BufReader<File>> {
